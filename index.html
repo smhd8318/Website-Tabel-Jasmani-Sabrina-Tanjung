@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Kalkulator Jasmani POLRI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Kalkulator Nilai Jasmani Polri</h1>
+
+  <form id="formTes">
+    <label>Nama: <input type="text" id="nama" required></label><br>
+    <label>Jenis Kelamin:
+      <select id="gender" required>
+        <option value="pria">Pria</option>
+        <option value="wanita">Wanita</option>
+      </select>
+    </label>
+
+    <table>
+      <tr><th>Jenis Tes</th><th>Hasil</th></tr>
+      <tr><td>Lari 12 Menit (meter)</td><td><input type="number" id="lari" min="0"></td></tr>
+      <tr><td>Pull Up (pria) / Chinning (wanita)</td><td><input type="number" id="pull" min="0"></td></tr>
+      <tr><td>Sit Up (jumlah)</td><td><input type="number" id="sit" min="0"></td></tr>
+      <tr><td>Push Up (jumlah)</td><td><input type="number" id="push" min="0"></td></tr>
+      <tr><td>Shuttle Run (detik)</td><td><input type="number" id="shuttle" step="0.1" min="0"></td></tr>
+    </table>
+
+    <button type="button" id="btnHitung">Hitung Nilai</button>
+  </form>
+
+  <div id="hasil" class="hidden">
+    <h2>Hasil Penilaian</h2>
+    <table id="tabelHasil"></table>
+    <p id="totalSkor"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
